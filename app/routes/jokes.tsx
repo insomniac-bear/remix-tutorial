@@ -13,7 +13,7 @@ export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesUrl },
 ];
 
-export const loader =async () => {
+export const loader = async () => {
   return json({
     jokeListItems: await db.joke.findMany({
       orderBy: { createdAt: 'desc' },
